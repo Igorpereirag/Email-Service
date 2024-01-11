@@ -1,4 +1,4 @@
-# Uber Backend Challenge API
+
 
 This project is an API developed using Java, Java Spring, and AWS Simple Email Service (SES). 
 ## Table of Contents
