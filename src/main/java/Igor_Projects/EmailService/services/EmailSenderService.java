@@ -18,8 +18,8 @@ public class EmailSenderService implements EmailSendUseCase {
 
     @Override
     public void sendEmail(String to, String subject, String body) {
-        // TODO Auto-generated method stub
-        throw new UnsupportedOperationException("Unimplemented method 'sendEmail'");
-    }
+        System.out.println("ola");
     
+}
+
 }
