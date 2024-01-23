@@ -11,20 +11,23 @@ import com.amazonaws.services.simpleemail.model.Destination;
 import com.amazonaws.services.simpleemail.model.Message;
 import com.amazonaws.services.simpleemail.model.SendEmailRequest;
 import Igor_Projects.EmailService.adapters.EmaIlSenderGateway;
+import Igor_Projects.EmailService.services.exceptions.EmailServiceException;
 
 @Service
 public class SesEmailSender implements EmaIlSenderGateway {
-    private final AmazonSimpleEmailService sesClient;
+
+
+    private final AmazonSimpleEmailService amazonsimpleemailservice;
 
     @Autowired
-    public SesEmailSender(AmazonSimpleEmailService sesClient) {
-        this.sesClient = sesClient;
+    public SesEmailSender(AmazonSimpleEmailService amazonsimpleemailservice) {
+        this.amazonsimpleemailservice = amazonsimpleemailservice;
     }
 
     @Override
     public void sendEmail(String toEmail, String subject, String body) {
         SendEmailRequest request = new SendEmailRequest()
-                .withSource("")
+                .withSource("igorpereira1501@gmail.com")
                 .withDestination(new Destination().withToAddresses(toEmail))
                 .withMessage(new Message()
                         .withSubject(new Content(subject))
@@ -32,8 +35,9 @@ public class SesEmailSender implements EmaIlSenderGateway {
                 );
 
         try {
-            sesClient.sendEmail(request);
+            amazonsimpleemailservice.sendEmail(request);
         } catch (AmazonServiceException ex) {
             throw new EmailServiceException("Email sending failed", ex);
         }
     }
+}
