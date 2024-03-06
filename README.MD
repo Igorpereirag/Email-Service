@@ -12,7 +12,7 @@ This project is an API developed using Java, Java Spring, and AWS Simple Email S
 ## Installation
 1. Clone the repository:
    ```bash
-   git clone
+   git clone https://github.com/Igorpereirag/Email_Service.git
    ```
 2. Install dependencies with Maven.
 
