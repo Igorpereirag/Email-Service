@@ -1,6 +1,6 @@
 
 
-This project is an API developed using Java, Java Spring, and AWS Simple Email Service (SES). 
+This project is an API developed using Java, Springboot, and AWS Simple Email Service (SES) with Clean Architecture.
 ## Table of Contents
 1. [Installation](#installation)
 2. [Configuration](#configuration)
