@@ -18,9 +18,9 @@ This project is an API developed using Java, Java Spring, and AWS Simple Email S
 
 3. Update `application.properties` with your AWS Credentials:
    ```properties
-  aws.region=us-east-1
-  aws.accessKeyId=SUA_CHAVE
-  aws.secretKey=SUA-SECRET
+    aws.region=us-east-1
+    aws.accessKeyId=SUA_CHAVE
+    aws.secretKey=SUA-SECRET
    ```
 
 ## Configuration
