@@ -1,56 +1,58 @@
+ API desenvolvida usando Java, Springboot e AWS Simple Email Service (SES) com Clean Architecture.
 
+## Índice
+- Instalação
+- Configuração
+- Uso
+- Endpoints da API
+- Banco de Dados
+- Contribuição
 
-This project is an API developed using Java, Springboot, and AWS Simple Email Service (SES) with Clean Architecture.
-## Table of Contents
-1. [Installation](#installation)
-2. [Configuration](#configuration)
-3. [Usage](#usage)
-4. [API Endpoints](#api-endpoints)
-5. [Database](#database)
-6. [Contributing](#contributing)
+### Instalação
+Clone o repositório:
 
-## Installation
-1. Clone the repository:
-   ```bash
-   git clone https://github.com/Igorpereirag/Email_Service.git
-   ```
-2. Install dependencies with Maven.
+```bash
+git clone https://github.com/Igorpereirag/Email_Service.git
+```
 
-3. Update `application.properties` with your AWS Credentials:
-   ```properties
-    aws.region=us-east-1
-    aws.accessKeyId=SUA_CHAVE
-    aws.secretKey=SUA-SECRET
-   ```
+Instale as dependências com o Maven.
 
-## Configuration
-- Make sure to update the `application.properties` file with your AWS credentials.
+Atualize o arquivo `application.properties` com suas credenciais da AWS:
 
-## Usage
-1. Start the application with Maven.
+```properties
+aws.region=us-east-1
+aws.accessKeyId=SUA_CHAVE
+aws.secretKey=SUA_SECRET
+```
 
-2. The API will be accessible at [http://localhost:8080](http://localhost:8080).
+### Configuração
+Certifique-se de atualizar o arquivo `application.properties` com suas credenciais da AWS.
 
-## API Endpoints
-The API provides the following endpoints:
+### Uso
+Inicie a aplicação com o Maven.
 
-### GET EMAIL
+A API estará acessível em `http://localhost:8080`.
 
-- **POST /api/email/send:** Send an email from your sender to the destination.
+### Endpoints da API
+A API fornece os seguintes endpoints:
 
-  **BODY:**
-  ```json
-  {
-    "to": "EMAIL",
-    "subject": "test",
-    "body": "test"
-  }
-  ```
+- **GET EMAIL**
+- **POST /api/email/send**: Envia um e-mail do remetente para o destino.
 
-## Database
-- No database is required for this API.
+Corpo da requisição (BODY):
 
-## Contributing
-Contributions are welcome! If you encounter any issues or have suggestions for improvements, please open an issue or submit a pull request to the repository.
+```json
+{
+  "to": "EMAIL",
+  "subject": "test",
+  "body": "test"
+}
+```
 
-When contributing, follow the existing code style, commit conventions, and submit your changes in a separate branch.
+### Banco de Dados
+Não é necessário um banco de dados para esta API.
+
+### Contribuição
+Contribuições são bem-vindas! Se você encontrar algum problema ou tiver sugestões de melhorias, por favor, abra uma issue ou envie um pull request para o repositório.
+
+Ao contribuir, siga o estilo de código existente, as convenções de commits e envie suas alterações em uma branch separada.
